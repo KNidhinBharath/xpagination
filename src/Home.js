@@ -59,30 +59,30 @@ export default function Home () {
             <h1> Employee Data Table</h1>
                 <table cellPadding="10" style={{borderSpacing:"100px 20px"}} >
                     <thead style={{background:"green"}}>
-                        <td>ID</td>
-                        <td>Name</td>
-                        <td>Email</td>
-                        <td>Role</td>
+                        <tr>ID</tr>
+                        <tr>Name</tr>
+                        <tr>Email</tr>
+                        <tr>Role</tr>
                     </thead>
 
             { pageData.map((item) => (
 
                     <tbody > 
-                        <td>
+                        <tr>
                             {item.id} 
-                        </td>
+                        </tr>
 
-                        <td>
+                        <tr>
                             {item.name}
-                        </td>
+                        </tr>
 
-                        <td>
+                        <tr>
                             {item.email}
-                        </td>
+                        </tr>
 
-                        <td>
+                        <tr>
                             {item.role}
-                        </td>
+                        </tr>
                      
                     </tbody>
 
@@ -90,9 +90,9 @@ export default function Home () {
 
                 </table>
              <div style={{display:"flex", justifyContent:"center"}}>
-                <button onClick={()=>handlePrev()}>prev</button>
+                <button onClick={()=>handlePrev()}>Previous</button>
                 <button disabled >{page}</button>
-                <button onClick={()=>handleNext()}>next</button>
+                <button onClick={()=>handleNext()}>Next</button>
             </div>  
             
         </div>
