@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import './Home.css'
 
 export default function Home () {
 
@@ -57,7 +58,7 @@ export default function Home () {
 
         <div style={{textAlign:"center" , display:"flex" , flexDirection:"column"}} >
             <h1> Employee Data Table</h1>
-                <table cellPadding="10" style={{borderSpacing:"100px 20px"}} >
+                <table cellPadding="10"  >
                     <thead style={{background:"green"}}>
 
                         <tr>
@@ -86,9 +87,9 @@ export default function Home () {
 
                 </table>
              <div style={{display:"flex", justifyContent:"center"}}>
-                <button onClick={()=>handlePrev()}>Previous</button>
-                <button disabled >{page}</button>
-                <button onClick={()=>handleNext()}>Next</button>
+                <button className="btn" onClick={()=>handlePrev()}>Previous</button>
+                <button className="btn" disabled >{page}</button>
+                <button className="btn" onClick={()=>handleNext()}>Next</button>
             </div>  
             
         </div>
