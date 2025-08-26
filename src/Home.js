@@ -10,18 +10,18 @@ export default function Home () {
     const [page ,setPage] = useState(1)
 
     useEffect(() => {
-        try {
+       
             const loadData = async() => {
-            const response = await fetch("https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json")
-            const result = await response.json()
-            setData(result)
-            }
+                try {
+                    const response = await fetch("https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json")
+                    const result = await response.json()
+                    setData(result)
+                    }
+                 catch (error) {
+                    alert("failed to fetch data")
+                    }
+                }
             loadData()
-            
-        }catch (error) {
-            alert("failed to fetch data")
-        }
-        
     },[])
 
     useEffect(()=> {
