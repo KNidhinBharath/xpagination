@@ -55,33 +55,29 @@ export default function Home () {
 
     return(
 
-        <div style={{display:"flex" , justifyContent:"center", alignItems:"center", textAlign:"center", flexDirection:"column" }}>
+        <div style={{textAlign:"center" , display:"flex" , flexDirection:"column"}} >
             <h1> Employee Data Table</h1>
                 <table cellPadding="10" style={{borderSpacing:"100px 20px"}} >
                     <thead style={{background:"green"}}>
-                        <tr>ID</tr>
-                        <tr>Name</tr>
-                        <tr>Email</tr>
-                        <tr>Role</tr>
+
+                        <tr>
+                           <td>ID</td> 
+                           <td>Name</td>
+                           <td>Email</td>
+                           <td>Role</td>
+                        </tr>
+
                     </thead>
 
             { pageData.map((item) => (
 
                     <tbody > 
-                        <tr>
-                            {item.id} 
-                        </tr>
 
                         <tr>
-                            {item.name}
-                        </tr>
-
-                        <tr>
-                            {item.email}
-                        </tr>
-
-                        <tr>
-                            {item.role}
+                            <td>{item.id}</td>
+                            <td>{item.name}</td>
+                            <td>{item.email}</td>
+                            <td>{item.role}</td>
                         </tr>
                      
                     </tbody>
